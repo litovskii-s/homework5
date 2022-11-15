@@ -10,6 +10,8 @@
     --social-icons: #AFB1B8;
     --footer-icons: #FFFFFF1A;
     --work-description-color: rgba(47, 48, 58, 0.8);
+    ;
+    ;
 
   }
 body {
@@ -258,6 +260,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
     display: flex;
     justify-content: space-between;
 }
+.work-list {
+    position: relative;
+}
 .work-description {
     display: flex;
     color: var(--background-color);
@@ -270,8 +275,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    position: relative;
+    position: absolute;
     bottom: 0;
+    width: 100%;
 }
 .team {
     background-color: var(--team-background-color);
@@ -601,6 +607,9 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .list-link:hover .portfolio-overlay{
     transform: translateY(0);
 }
+.list-link:focus .portfolio-overlay{
+    transform: translateY(0);
+}
 .main-description {
     padding: 20px 24px 20px;
     border-left: 1px solid #EEEEEE;
@@ -630,12 +639,19 @@ h1, h2, h3, h4, h5, h6, p, ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 400px;
-    height: 500px;
+    width: 528px;
+    height: 581px;
     background-color: var(--background-color);
 }
 .close-button {
     position: absolute;
     right: 8px;
     top: 8px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
